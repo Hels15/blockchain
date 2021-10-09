@@ -105,6 +105,7 @@ print(pk_coin)
 pk_coin.new_transaction(Transaction("Luke", "Han", 5))
 pk_coin.new_transaction(Transaction("Obi-wan", "Han", 150))
 pk_coin.new_transaction(Transaction("Han", "Yoda", 200))
+#print(">>> BALANCE >>>")
 
 # print('>>>TRANSACTION>>>')
 # for item in pk_coin.transaction_list:
@@ -115,17 +116,16 @@ print('>>>BLOCKS>>>')
 print(pk_coin)
 #
 # print('>>>TRANSACTION>>>')
-# for item in pk_coin.transaction_list:
-#     print(item)
+for item in pk_coin.transaction_list:
+     print(item)
+print('Luke', pk_coin.get_balance('Luke'))
 
-
-#print(">>> BALANCE >>>")
 
 
 print('>>>MINING>>>')
 pk_coin.mine_transactions('Yoda')
 
-print('Luke', pk_coin.get_balance('Luke'))
+
 # print('>>>BLOCKS>>>')
 # print(pk_coin)
 
